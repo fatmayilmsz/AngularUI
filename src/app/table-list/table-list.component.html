@@ -1,0 +1,42 @@
+<div class="nav sidebar-opener" (click)="sidebarShow = !sidebarShow">
+    Angular UI
+  </div>
+  
+<p>table-list works!</p>
+
+<!-- <div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
+    Click me to open/close the sidebar
+</div> -->
+
+<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+  <div
+      class="sidebar-close"
+      (click)="sidebarShow = !sidebarShow"
+  >
+      X
+  </div>
+    <div class="sidebar-content">
+      <div>SIDEBAR</div>
+    </div>
+</div>
+<div class="tablo">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody> 
+            <tr *ngFor="let data of datas"> 
+                <td>{{ data.id }}</td>
+                <td>{{ data.firstName }}</td>
+                <td>{{ data.lastName }}</td>
+                <td><button class="buton" (click)="deleteComp(data.id)">Sil</button>
+                    <button class="buton" (click)="updateComp(data.id)">Güncelle</button></td>
+            </tr>
+        </tbody>
+      </table>
+</div>
