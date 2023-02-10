@@ -2,7 +2,6 @@
     Angular UI
   </div>
   
-<p>table-list works!</p>
 
 <!-- <div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
     Click me to open/close the sidebar
@@ -19,8 +18,25 @@
       <div>SIDEBAR</div>
     </div>
 </div>
+<div class="col cc">
+    First Name:<br>
+    <input type="text" [(ngModel)]="firstName"><br>
+    Last Name:<br>
+    <input type="text" [(ngModel)]="lastName">
+    <br><br>
+    <button type="submit" (click)="createPerson()" class="buton">Add New Person</button><br>
+</div>
+<div class="form-area updateform col cc">
+    First Name:<br>
+    <input type="text" [(ngModel)]="upFirstName"><br>
+    Last Name:<br>
+    <input type="text" [(ngModel)]="upLastName">
+    <br><br>
+    <button type="submit" (click)="updateePerson()" class="buton">Update Person</button><br>
+</div>
+
 <div class="tablo">
-    <table class="table">
+    <table class="table col">
         <thead>
           <tr>
             <th scope="col">Id</th>
@@ -34,9 +50,11 @@
                 <td>{{ data.id }}</td>
                 <td>{{ data.firstName }}</td>
                 <td>{{ data.lastName }}</td>
-                <td><button class="buton" (click)="deleteComp(data.id)">Sil</button>
-                    <button class="buton" (click)="updateComp(data.id)">Güncelle</button></td>
+                <td><button class="buton" (click)="deletePerson(data.id)">Delete </button> &nbsp;
+                    <button class="buton" (click)="updatePerson(data.id)">Update</button></td>
             </tr>
         </tbody>
       </table>
+      
+
 </div>

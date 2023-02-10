@@ -28,7 +28,4 @@ export class HttpServiceService {
     let options = { headers: this.getHeaders(), body: data };
     return this.http.delete(url, options);
   }
-
-
-
 }

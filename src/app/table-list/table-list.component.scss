@@ -64,22 +64,20 @@ table, td ,tr,th {
     border-collapse: collapse;
     padding: 10px;
     top: 100px;
-    margin-top: 250px;
-    margin-left: auto; 
+    margin-top: 200px;
+    margin-left: 450px; 
     margin-right: auto;
     padding-left: 90px;
   padding-right: 70px;
 
 }
-th, td {
+th, td,input {
     background-color: #96D4D4;
-    
   }
   
 tr:nth-child(even) {
     background-color: #dddddd;
-  }
-  
+}
 .buton{
     background-color: #266262;
     color: white;    
@@ -90,4 +88,12 @@ tr:nth-child(even) {
     background-color: #96D4D4;
     color: #266262;
     
+}
+.cc{
+    margin-top: 180px;
+    margin-left: 200px;
+    position: absolute;
+}
+.updateform{
+    margin-top: 10px;
 }
